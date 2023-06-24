@@ -1,0 +1,46 @@
+xycar 제공 시뮬레이터 실행 방법입니다.
+
+<-----driving simulator----->
+
+1. 첫 번째 창
+$ cm
+$ roslaunch rosbridge_server rosbridge_websocket.launch
+
+2. 두 번째 창
+$ cd ~/catkin_ws/src/xycar_sim_driving
+$ ./xycar3Dsimulator.x86_64
+
+3. 세 번째 창
+$ cm
+$ roslaunch assignment1 driving.launch
+
+( 혹시 차가 움직이지 않는다면 cm을 입력한 후 다시 해보세요. )
+
+
+
+
+<-----parking simulator----->
+
+$ cm
+$ roslaunch assignment1 driving.launch
+
+
+
+
+<-----.bashrc 파일 수정----->
+
+# ================== DON'T TOUCH!!!! ==================
+echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
+alias cm='cd ~/catkin_ws && catkin_make'
+alias eb='nano ~/.bashrc'
+alias sb='source ~/.bashrc'
+alias gs='git status'
+alias gp='git pull'
+alias cw='cd ~/catkin_ws'
+alias cs='cd ~/catkin_ws/src'
+alias cm='cd ~/catkin_ws && catkin_make && source /opt/ros/melodic/setup.bash && source ~/catkin_ws/devel/setup.bash'
+alias dis1920='xrandr --newmode "1920x1080" 172.80 1920 2040 2248 2576 1080 1081 1084 1118 -HSync +Vsync && xrandr --addmode DP-1 1920x1080 && xrandr -s 1920x1080'
+source /opt/ros/melodic/setup.bash
+export ROS_MASTER_URI=http://localhost:11311
+export ROS_HOSTNAME=localhost
+# =====================================================
