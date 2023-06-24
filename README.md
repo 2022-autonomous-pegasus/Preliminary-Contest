@@ -42,7 +42,7 @@ $ roslaunch assignment1 driving.launch
 2. parking simulator
 ```bash
 $ cm
-$ roslaunch assignment1 driving.launch
+$ roslaunch assignment2 parking.launch
 ```
 
 
